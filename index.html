@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- 
+        Boxicons Link
+    -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- 
+        Google Font Link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet" />
+    <title>Countries</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <h2>Country Explorer</h2>
+            <div id="theme"><box-icon class="icon" color="hsl(0, 0%, 100%)" type='solid' name='sun'></box-icon><h5>Light Mode</h5></div>
+        </div>
+    </nav>
+    <div class="select-area">
+        <div class="select-area-inner">
+            <div class="input-box">
+                <box-icon  id="search" color="hsl(0, 0%, 52%)"  name='search' ></box-icon>
+                <input type="text" id="myInput" oninput="myFunction()" autocomplete="off" placeholder="Search for a country...">
+            </div>
+    
+            <!-- 
+            Dropdown
+            -->
+        <div class="dropdown">
+            <button onclick="dropDOWN()" class="dropbtn">Filter By Region <box-icon style="position: relative;top: 5px;margin-left: 10px;" name='chevron-down'></box-icon> </button>
+            <div id="myDropdown" class="dropdown-content">
+                <div class="drop-region" >Africa</div>
+                <div class="drop-region" >Americas</div>
+                <div class="drop-region" >Asia</div>
+                <div class="drop-region" >Europe</div>
+                <div class="drop-region" >Oceania</div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="languageDropdown()" class="dropbtn">Filter By Language <box-icon style="position: relative;top: 5px;margin-left: 10px;" name='chevron-down'></box-icon></button>
+            <div id="languageDropdown" class="dropdown-content">
+                <div class="drop-language">English</div>
+                <div class="drop-language">Spanish</div>
+                <div class="drop-language">French</div>
+                <div class="drop-language">Chinese</div>
+                <div class="drop-language">Arabic</div>
+            </div>
+        </div>
+        </div>
+        
+
+    </div>
+    
+    <div class="back dropbtn" onclick="back()">
+        <box-icon name='left-arrow-alt' style="position: relative;top: 6px;margin-right: 10px;"></box-icon>Back
+    </div>
+
+    <!-- 
+        Countries Display Main section
+        -->
+    <main id="main">
+       
+    </main>
+   
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
